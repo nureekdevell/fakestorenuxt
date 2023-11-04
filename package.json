@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.10.0",
-    "@nuxtjs/tailwindcss": "^6.8.1"
+    "@nuxtjs/tailwindcss": "^6.8.1",
+    "swiper": "^11.0.3"
   }
 }
