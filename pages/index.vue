@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-full bg-[linear-gradient(rgb(255,_228,_230),_rgb(204,_251,_241))]"
+    class="max-w-full "
   >
     <div class="container">
       <section class="section">
@@ -22,6 +22,7 @@
         </div>
 
         <Swiper
+          class="!pb-10"
           :slides-per-view="3"
           :space-between="50"
           :autoplay="{ delay: 2_500, pauseOnMouseEnter: true }"
