@@ -25,7 +25,7 @@
           >
             <div
               v-if="count > 0"
-              class="absolute -bottom-2 -left-2 rounded-full bg-red-600 w-8 h-8 text-white"
+              class="absolute -bottom-2 -left-2 rounded-full bg-red-600 w-6 h-6 text-white"
             >
               {{ count }}
             </div>

@@ -3,21 +3,21 @@
     <div
       class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
-      <a class="p-6 block" href="#">
+      <NuxtLink class="p-6 block" :href="`/products/${$props.id}`">
         <img
           class="rounded-t-lg rounded-xl"
-          src="https://i.insider.com/602ee9d81a89f20019a377c6?width=1136&format=jpeg"
+          :src="$props.image"
           alt="product image"
         />
-      </a>
+      </NuxtLink>
       <div class="px-5 pb-5">
-        <a href="#">
+        <NuxtLink :href="`/products/${$props.id}`">
           <h5
             class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
           >
-            Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+            {{ $props.title }}
           </h5>
-        </a>
+        </NuxtLink>
         <div class="flex items-center mt-2.5 mb-5">
           <svg
             class="w-4 h-4 text-yellow-300 mr-1"
@@ -81,7 +81,7 @@
         </div>
         <div class="flex items-center justify-between">
           <span class="text-3xl font-bold text-gray-900 dark:text-white"
-            >$599</span
+            >$ {{ $props.price }}</span
           >
           <button
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -96,6 +96,15 @@
 </template>
 
 <script setup>
+defineProps({
+  id: { type: Number },
+  title: { type: String },
+  price: { type: String },
+  category: { type: String },
+  description: { type: String },
+  image: { type: String },
+});
+
 const cartCount = useState("cart-count", () => 0);
 
 const addToCart = () => {

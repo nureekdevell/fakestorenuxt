@@ -9,3 +9,9 @@
 <script setup>
 import "swiper/css";
 </script>
+
+<style>
+::-webkit-scrollbar {
+  width: 0px;
+}
+</style>
